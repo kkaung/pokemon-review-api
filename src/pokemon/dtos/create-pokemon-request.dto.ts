@@ -1,5 +1,4 @@
-export class Pokemon {
-  id: string;
+export class CreatePokemonRequest {
   name: string;
   birthDate: Date;
 }
