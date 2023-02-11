@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import { Owner } from 'src/entities/owner.entity';
 import { DataSource } from 'typeorm';
 import { Pokemon } from '../entities';
 
@@ -9,7 +10,7 @@ export const AppDataSource = new DataSource({
   username: 'postgres',
   password: 'nrqgDOpG9D3PlQtELauj',
   database: 'railway',
-  entities: [Pokemon],
+  entities: [Pokemon, Owner],
   synchronize: true,
   logging: false,
 });

@@ -3,7 +3,7 @@ import { AppDataSource } from 'src/helpers';
 import { Pokemon } from 'src/entities';
 
 export class PokemonRepository {
-  private pokemonRepository: Repository<Pokemon>;
+  private readonly pokemonRepository: Repository<Pokemon>;
   constructor() {
     this.pokemonRepository = AppDataSource.getRepository(Pokemon);
   }
