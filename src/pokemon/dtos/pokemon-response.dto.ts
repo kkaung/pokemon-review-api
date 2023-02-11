@@ -1,7 +1,7 @@
 export class PokemonResponse<T> {
   constructor(
-    public message: string = '',
-    public data: T,
-    public success: boolean,
+    public readonly message: string = '',
+    public readonly data: T = null,
+    public readonly success: boolean = true,
   ) {}
 }

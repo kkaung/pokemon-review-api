@@ -8,27 +8,27 @@ export class PokemonRepository {
     this.pokemonRepository = AppDataSource.getRepository(Pokemon);
   }
 
-  getPokemons() {
-    return this.pokemonRepository.find();
+  async getPokemons() {
+    return await this.pokemonRepository.find();
   }
 
-  getPokemonById(id: string) {
-    return this.pokemonRepository.findOneBy({ id });
+  async getPokemonById(id: string) {
+    return await this.pokemonRepository.findOneBy({ id });
   }
 
-  getPokemonByName(name: string) {
-    return this.pokemonRepository.findOneBy({ name });
+  async getPokemonByName(name: string) {
+    return await this.pokemonRepository.findOneBy({ name });
   }
 
-  savePokemon(pokemon: Pokemon) {
-    return this.pokemonRepository.save(pokemon);
+  async savePokemon(pokemon: Pokemon) {
+    return await this.pokemonRepository.save(pokemon);
   }
 
-  deletePokemon(id: string) {
-    return this.pokemonRepository.delete(id);
+  async deletePokemon(id: string) {
+    return await this.pokemonRepository.delete(id);
   }
 
-  updatePokemonById(id: string) {
-    return this.pokemonRepository.findOneBy({ id });
+  async updatePokemonById(id: string, pokemon: Pokemon) {
+    return await this.pokemonRepository.update(id, pokemon);
   }
 }
